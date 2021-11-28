@@ -7,7 +7,8 @@ import { UserService } from './services/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'test-spindox';
+  user: any;
+  userDataToDisplay: string = '';
 
   constructor(private userService: UserService) {}
 
@@ -16,7 +17,12 @@ ngOnInit() {
   this.userService.getUser()
   .subscribe(user => {
     console.log('USER: ', user);
+    this.user = user?.results[0];
   });
+}
+
+onIconHover(event: string) {
+  this.userDataToDisplay = event;
 }
 
 }

@@ -1,0 +1,12 @@
+<app-user-picture 
+  [urlImage]="user?.picture?.large">
+</app-user-picture>
+
+<app-user-data-display
+  [userData]="userDataToDisplay">
+</app-user-data-display>
+
+<app-user-data-icon 
+  [userIcon]="'test'"
+  (dataKind)="onIconHover($event)">
+</app-user-data-icon>
