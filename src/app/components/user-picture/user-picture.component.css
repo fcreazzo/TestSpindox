@@ -1,0 +1,11 @@
+.picture-profile-background {
+    display: inline-flex;
+    padding: 0.3rem;
+    background-color: #FEFEFE;
+    border-radius: 50%;
+    border: #555555 solid 1px;
+}
+
+.user-picture-profile {
+    border-radius: 50%;
+}
