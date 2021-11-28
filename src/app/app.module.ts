@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { UserPictureComponent } from './components/user-picture/user-picture.component';
+import { UserDataDisplayComponent } from './components/user-data-display/user-data-display.component';
+import { UserDataIconComponent } from './components/user-data-icon/user-data-icon.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserPictureComponent,
+    UserDataDisplayComponent,
+    UserDataIconComponent
   ],
   imports: [
     BrowserModule,
