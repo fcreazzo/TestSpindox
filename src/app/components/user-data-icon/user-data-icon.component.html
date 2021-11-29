@@ -1,6 +1,11 @@
 <div 
-    *ngIf="userIcon === 'test'"
     (mouseover)="onMouseOver(userIcon)"
-    (mouseout)="onMouseOut()">
-    TEST 1
+    (mouseout)="onMouseOut()"
+    [ngSwitch]="userIcon">
+        <fa-icon *ngSwitchCase="'name'" [icon]="userName"  size="2x"></fa-icon>
+        <fa-icon *ngSwitchCase="'email'" [icon]="userEmail"  size="2x"></fa-icon>
+        <fa-icon *ngSwitchCase="'calendar'" [icon]="userCalendar"  size="2x"></fa-icon>
+        <fa-icon *ngSwitchCase="'address'" [icon]="userAddress"  size="2x"></fa-icon>
+        <fa-icon *ngSwitchCase="'phone'" [icon]="userPhone"  size="2x"></fa-icon>
+        <fa-icon *ngSwitchCase="'password'" [icon]="userPassword"  size="2x"></fa-icon>
 </div>
