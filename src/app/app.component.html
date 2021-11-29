@@ -1,12 +1,43 @@
-<app-user-picture 
+<app-user-picture
+  class="user-picture"
   [urlImage]="user?.picture?.large">
 </app-user-picture>
 
 <app-user-data-display
+  class="data-display"
   [userData]="userDataToDisplay">
 </app-user-data-display>
 
-<app-user-data-icon 
-  [userIcon]="'test'"
-  (dataKind)="onIconHover($event)">
-</app-user-data-icon>
+<div 
+  class="icons-bar"
+  (mouseout)="onIconOut()">
+  <app-user-data-icon 
+    [userIcon]="'name'"
+    (dataKind)="onIconHover($event)">
+  </app-user-data-icon>
+
+  <app-user-data-icon 
+    [userIcon]="'email'"
+    (dataKind)="onIconHover($event)">
+  </app-user-data-icon>
+
+  <app-user-data-icon 
+    [userIcon]="'calendar'"
+    (dataKind)="onIconHover($event)">
+  </app-user-data-icon>
+
+  <app-user-data-icon 
+    [userIcon]="'address'"
+    (dataKind)="onIconHover($event)">
+  </app-user-data-icon>
+
+  <app-user-data-icon 
+    [userIcon]="'phone'"
+    (dataKind)="onIconHover($event)">
+  </app-user-data-icon>
+
+  <app-user-data-icon 
+    [userIcon]="'password'"
+    (dataKind)="onIconHover($event)">
+  </app-user-data-icon>
+</div>
